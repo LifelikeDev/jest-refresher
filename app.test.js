@@ -59,7 +59,20 @@ test("to be greater than 5", function () {
 });
 
 // toBeLessThan()
-test("to be less than 10", function () {
-  const sum = 9;
-  expect(sum).toBeLessThan(10);
+test("value to be less than 80 dollars", function () {
+  const withdrawal1 = 50;
+  const withdrawal2 = 18;
+  expect(withdrawal1 + withdrawal2).toBeLessThan(80);
+});
+
+// toBeLessThanOrEqual()
+test("value to be less than or equal to 80 dollars", function () {
+  const withdrawal1 = 50;
+  const withdrawal2 = 30;
+  expect(withdrawal1 + withdrawal2).toBeLessThanOrEqual(80);
+});
+
+// toMatch()
+test('there is a "stop" in "Christopher"', () => {
+  expect("Christopher").toMatch(/Stop/i);
 });
