@@ -3,6 +3,9 @@ const functions = {
     return a + b;
   },
   multiply: (g, h) => g * h,
+  nullify: function () {
+    return null;
+  },
 };
 
 module.exports = functions;
