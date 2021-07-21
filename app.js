@@ -1,3 +1,5 @@
+const axios = require("axios");
+
 const functions = {
   add: function (a, b) {
     return a + b;
@@ -22,6 +24,13 @@ const functions = {
   randomPeople: function () {
     const people = ["Jane", "Tyler", "Kyle", "Ama", "Efua"];
     return people;
+  },
+  ///////
+  fetchUsers: () => {
+    return axios
+      .get("https://jsonplaceholder.typicode.com/users")
+      .then((res) => res.data)
+      .catch((err) => `error: ${err}`);
   },
 };
 

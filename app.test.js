@@ -78,11 +78,39 @@ const functions = require("./app");
 // });
 
 // Arrays
-// toContain()
-test("The list of people should include 'Efua'", function () {
-  expect(functions.randomPeople()).toContain("Efua");
-});
+// // toContain()
+// test("The list of people should include 'Efua'", function () {
+//   expect(functions.randomPeople()).toContain("Efua");
+// });
 
-test("The list of people should not include 'Esiana'", function () {
-  expect(functions.randomPeople()).not.toContain("Esiana");
+// test("The list of people should not include 'Esiana'", function () {
+//   expect(functions.randomPeople()).not.toContain("Esiana");
+// });
+
+// Asynchronous calls
+
+// Promises
+// test("user should have the name 'Leanne Graham'", function () {
+//   expect.assertions(1);
+
+//   return functions.fetchUsers().then((data) => {
+//     expect(data.name).toEqual("Leanne Graham");
+//   });
+// });
+
+// test("User data should be 8 or more", function () {
+//   expect.assertions(1);
+
+//   return functions.fetchUsers().then((data) => {
+//     expect(data.length).toBeGreaterThan(8);
+//   });
+// });
+
+// Async Await
+
+test("User data should not be more than 12", async function () {
+  expect.assertions(1);
+
+  const data = await functions.fetchUsers();
+  expect(data.length).toBeLessThanOrEqual(11);
 });
