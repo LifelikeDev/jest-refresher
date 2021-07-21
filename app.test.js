@@ -35,44 +35,54 @@ const functions = require("./app");
 // });
 
 // toBeFalsy()
-test("should be falsy", function () {
-  expect(functions.nullify()).toBeFalsy();
-});
+// test("should be falsy", function () {
+//   expect(functions.nullify()).toBeFalsy();
+// });
 
-// toBeTruthy()
-test("should be truthy", function () {
-  expect(functions.truthify()).toBeTruthy();
-});
+// // toBeTruthy()
+// test("should be truthy", function () {
+//   expect(functions.truthify()).toBeTruthy();
+// });
 
-// toEqual() --- for objects
-test("should return Leah Anderson", function () {
-  expect(functions.defineUser()).toEqual({
-    firstName: "Leah",
-    secondName: "Anderson",
-  });
-});
+// // toEqual() --- for objects
+// test("should return Leah Anderson", function () {
+//   expect(functions.defineUser()).toEqual({
+//     firstName: "Leah",
+//     secondName: "Anderson",
+//   });
+// });
 
-// toBeGreaterThan()
-test("to be greater than 5", function () {
-  const sum = 34;
-  expect(sum).toBeGreaterThan(5);
-});
+// // toBeGreaterThan()
+// test("to be greater than 5", function () {
+//   const sum = 34;
+//   expect(sum).toBeGreaterThan(5);
+// });
 
 // toBeLessThan()
-test("value to be less than 80 dollars", function () {
-  const withdrawal1 = 50;
-  const withdrawal2 = 18;
-  expect(withdrawal1 + withdrawal2).toBeLessThan(80);
+// test("value to be less than 80 dollars", function () {
+//   const withdrawal1 = 50;
+//   const withdrawal2 = 18;
+//   expect(withdrawal1 + withdrawal2).toBeLessThan(80);
+// });
+
+// // toBeLessThanOrEqual()
+// test("value to be less than or equal to 80 dollars", function () {
+//   const withdrawal1 = 50;
+//   const withdrawal2 = 30;
+//   expect(withdrawal1 + withdrawal2).toBeLessThanOrEqual(80);
+// });
+
+// // toMatch()
+// test('there is a "stop" in "Christopher"', () => {
+//   expect("Christopher").toMatch(/Stop/i);
+// });
+
+// Arrays
+// toContain()
+test("The list of people should include 'Efua'", function () {
+  expect(functions.randomPeople()).toContain("Efua");
 });
 
-// toBeLessThanOrEqual()
-test("value to be less than or equal to 80 dollars", function () {
-  const withdrawal1 = 50;
-  const withdrawal2 = 30;
-  expect(withdrawal1 + withdrawal2).toBeLessThanOrEqual(80);
-});
-
-// toMatch()
-test('there is a "stop" in "Christopher"', () => {
-  expect("Christopher").toMatch(/Stop/i);
+test("The list of people should not include 'Esiana'", function () {
+  expect(functions.randomPeople()).not.toContain("Esiana");
 });

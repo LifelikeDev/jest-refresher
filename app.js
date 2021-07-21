@@ -18,6 +18,11 @@ const functions = {
     user.secondName = "Anderson";
     return user;
   },
+  //////
+  randomPeople: function () {
+    const people = ["Jane", "Tyler", "Kyle", "Ama", "Efua"];
+    return people;
+  },
 };
 
 module.exports = functions;
