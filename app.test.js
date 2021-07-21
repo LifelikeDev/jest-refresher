@@ -22,7 +22,6 @@ test("returns null as output", function () {
 
 // toBeUndefined()
 test("to be undefined", function () {
-  //   let numeral = 24;
   let numeral;
 
   expect(numeral).toBeUndefined();
@@ -31,7 +30,16 @@ test("to be undefined", function () {
 // toBeDefined()
 test("to be defined", function () {
   let numeral = 24;
-  //   let numeral;
 
   expect(numeral).toBeDefined();
+});
+
+// toBeFalsy()
+test("should be falsy", function () {
+  expect(functions.nullify()).toBeFalsy();
+});
+
+// toBeTruthy()
+test("should be truthy", function () {
+  expect(functions.truthify()).toBeTruthy();
 });

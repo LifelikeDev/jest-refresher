@@ -6,6 +6,9 @@ const functions = {
   nullify: function () {
     return null;
   },
+  truthify: function () {
+    return -1;
+  },
 };
 
 module.exports = functions;
